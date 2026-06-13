@@ -1,0 +1,14 @@
+$kind: http-request
+name: http://localhost:8000/api/v1/users/register
+url: http://localhost:8000/api/v1/users/register
+method: POST
+body:
+  type: json
+  content: |-
+    {
+         "fullName":"prathaqmw",
+         "username":"abcde",
+         "email":"abcd.com",
+         "password":"123"
+    }
+order: 1980360269681073

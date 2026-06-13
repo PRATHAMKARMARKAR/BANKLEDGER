@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:8000/api/v1/healthcheck
+method: GET
+order: 1780982936164
