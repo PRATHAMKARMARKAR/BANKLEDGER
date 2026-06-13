@@ -25,17 +25,16 @@ services:
       - key: CORS_ORIGIN
         sync: false # Set this to the frontend URL after deployment
 
-  # 2. Frontend Static Site (React/Vite)
-  - type: static
-    name: finledger-frontend
+# 2. Frontend Static Site (React/Vite)
+staticSites:
+  - name: finledger-frontend
     rootDir: frontend
     buildCommand: npm install && npm run build
     publishPath: dist
     headers:
       - path: /*
-        headers:
-          - key: Access-Control-Allow-Origin
-            value: "*"
+        name: Access-Control-Allow-Origin
+        value: "*"
     routes:
       - type: rewrite
         source: /*
